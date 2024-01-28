@@ -7,14 +7,55 @@
 header {
     font-size: 3.5em;
     text-align: center;
+    font-size: 100%;
 }
 
 button {
     width: 250px;
     margin: 0 .5%;
-    font-size: 200%;
+    font-size: 100%;
     color: white;
     background-color: rgb(80, 14, 80);
     border: 3px solid #13293d;
     border-radius: 25px;
+  }
+
+button {
+    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
+    border-radius: 8px;
+    color: #13293d;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  }
+  
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    nav {
+      background-color: #bb8588;
+      width: 100%;
+    }
+  }
+  
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    .sample-img {
+      background-color: #8ac4ff;
+      width: 100%;
+    }
   }
