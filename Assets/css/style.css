@@ -4,6 +4,14 @@
     font: 
 }
 
+/* Create CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+    --white: #fff;
+    --dark-blue: #13293d;
+    /* You can use it with any value that is repeated throughout the sheet */
+    --border-radius: 50px;
+  }
+
 header {
     font-size: 3.5em;
     text-align: center;
@@ -35,6 +43,15 @@ button {
     transition-property: background-color;
     transition-timing-function: linear;
     margin-top: 0.6em;
+}
+
+button:hover {
+    background-color: rgb(164, 30, 164);
+}
+
+.start-button {
+    color: white;
+    background-color: rgb(80, 14, 80);
 }
 
 /* Tablets - header changes color */
