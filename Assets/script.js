@@ -119,7 +119,7 @@ init();
 // Function to go through all the quiz questions
 function getQuestion() {
    currentQuestion = questions[currentIndex];
-   quizBox.textContent = currentQuestion.question;
+   quizBox.textContent = currentQuestion.questions;
 
    // Make answer buttons visible, add text content and click event 
    answerOptions.classList.remove("visibility");
@@ -134,6 +134,19 @@ function getQuestion() {
    option3.textContent = currentQuestion.choice3;
    option4.textContent = currentQuestion.choice4;
 }
+
+//Display question and answer buttons
+// var displayQuestion = function(index) {
+//     questionEl.innerText = index.question
+//     for (var i = 0; i < index.choices.length; i++) {
+//         var answerbutton = document.createElement("button")
+//         answerbutton.innerText = index.choices[i].choice
+//         answerbutton.classList.add("btn")
+//         answerbutton.classList.add("answerbtn")
+//         answerbutton.addEventListener("click", answerCheck)
+//         answerbuttonsEl.appendChild(answerbutton)
+//     }
+// };
 
 //    var promptEL =
 //    document.getElementbyClass ("question-words");
