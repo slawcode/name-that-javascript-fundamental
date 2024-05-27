@@ -55,11 +55,34 @@ var time = questions.length * 60;
 
 function startGame() {
     isWin = false;
-    timerCount = 10;
+    timerCount = 60;
     // Prevents start button from being clicked when round is in progress
     startButton.disabled = true;
-    renderBlanks()
+    // renderBlanks()
     startTimer()
+}
+
+
+function startTimer() {
+    // Sets the timer
+    timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        if (timerCount >= 0) {
+            //Tests if win condition is met 
+            if (isWin && timerCount > 0) {
+                //Clears interval and stops timer 
+                clearInterval(timer);
+                winGame();
+            }
+        }
+        //Tests if time has run out
+        if (timerCount === 0) {
+            // Clears interval
+            clearInterval(timer);
+            loseGame();
+        }
+    }, 1000);
 }
 
 // Start the quiz when the 'Start Quiz' button is clicked
