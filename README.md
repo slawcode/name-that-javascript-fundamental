@@ -4,7 +4,7 @@ A timed coding quiz on the fundamentals of JavaScript.
 ## Description
 - The motivation for this project was Javascript and Web API's to create a timed quiz on the fundamentals of JavaScript. Implementating and practicing JavaScript and Web API's is subsequently motivation for this project. 
 - This project utilizes HTML, CSS, JavaScript and Web API's. HTML and CSS provide the structure and styling of the page and JavaScript and Web API's in order to go through the carousel of questions and provide the interavtivity of the webpage. 
-- During the building of this project I learned JavaScript functions...and web API...how to circle through steps, and essentially questions and utilize a timer during the process.
+- During the building of this project I learned JavaScript functions...and web API...how to circle through steps, and essentially questions and utilizing a timer during the process.
 
 ## Usage
 - To take this quiz, the user can access the webpage by placing the URL in a browser. The webpage does not require any authentications, like a password.
