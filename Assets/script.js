@@ -1,9 +1,12 @@
 // DOM elements
 var startButton = document.querySelector(".startButton");
 var timerElement = document.querySelector(".timer");
-
 var questionsEl = document.querySelector("#questions");
 var submitButton = document.querySelector(".submit-score-button");
+// var questions
+
+var timer;
+var timerCount;
 
 // Questions variable created which is an array of all questions and their answer
 var questions = [
@@ -60,9 +63,10 @@ function startGame() {
     startButton.disabled = true;
     // renderBlanks()
     startTimer()
+    questions()
 }
 
-
+// Function created to start timer 
 function startTimer() {
     // Sets the timer
     timer = setInterval(function() {
@@ -93,18 +97,30 @@ startButton.addEventListener("click", startGame);
 // Calls init() so that it fires when page opened
 init();
 
-// function getQuestion () {
-//    var currentQuestion = questions[currentQuestionIndex];
-//     
+// Function to go through all the quiz questions
+function getQuestion() {
+   currentQuestion = questions[currentIndex];
+   quizBox.textContent = currentQuestion.question;
+
+   // Make answer buttons visible, add text content and click event 
+   answerOptions.classList.remove("visibility");
+
+   option1.TextContent = currentQuestion.choice1;
+   option2.textContent = currentQuestion.choice2;
+   option3.textContent = currentQuestion.choice3;
+   option4.textContent = currentQuestion.choice4;
+   
+    
 //    var promptEL =
 //    document.getElementbyClass ("question-words");
-//    promptEl.textContent = 
-//    currentQuestion.prompt; 
-//    choicesEl.innerHTML = ""; 
+//    questionsEl.textContent = 
+// //    currentQuestion.prompt; 
+// //    choicesEl.innerHTML = ""; 
 //    currentQuestion.options.forEach( 
 //    function (choice, i) { 
 //    let choiceBtn = 
 //    document.createElement("button"); 
+// })
 // }
 
 
