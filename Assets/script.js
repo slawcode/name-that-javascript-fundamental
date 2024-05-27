@@ -4,9 +4,28 @@ var timerElement = document.querySelector(".timer");
 var questionsEl = document.querySelector("#questions");
 var submitButton = document.querySelector(".submit-score-button");
 // var questions
+var answerOptions = document.querySelector(".answerButtons");
 
 var timer;
 var timerCount;
+// Set the current index for quiz questions to zero
+var currentIndex = 0;
+
+// Create buttons and append 
+var option1 = document.createElement("button");
+var option2 = document.createElement("button");
+var option3 = document.createElement("button");
+var option4 = document.createElement("button");
+
+option1.classList.add("btn");
+option2.classList.add("btn");
+option3.classList.add("btn");
+option4.classList.add("btn");
+
+answerOptions.appendChild(option1);
+answerOptions.appendChild(option2);
+answerOptions.appendChild(option3);
+answerOptions.appendChild(option4);
 
 // Questions variable created which is an array of all questions and their answer
 var questions = [
@@ -110,7 +129,12 @@ function getQuestion() {
    option3.textContent = currentQuestion.choice3;
    option4.textContent = currentQuestion.choice4;
    
-    
+   option1.textContent = currentQuestion.choice1;
+   option2.textContent = currentQuestion.choice2; 
+   option3.textContent = currentQuestion.choice3;
+   option4.textContent = currentQuestion.choice4;
+}
+
 //    var promptEL =
 //    document.getElementbyClass ("question-words");
 //    questionsEl.textContent = 
