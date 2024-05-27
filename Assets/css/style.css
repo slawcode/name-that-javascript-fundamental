@@ -97,6 +97,35 @@ h2 {
     transition-duration: 0.60s;
 }
 
+.quizBox, .myButton {
+  text-align: center;
+  justify-content: center;
+}
+
+.answerButtons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 10 px;
+  background-color: rgb(80, 14, 80);
+}
+
+.btn:hover {
+  background-color: rgb(80, 14, 80); 
+  color: white; 
+}
+
+visibility {
+  visibility: hidden;
+}
+
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
     header {
