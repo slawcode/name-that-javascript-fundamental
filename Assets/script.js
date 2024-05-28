@@ -3,6 +3,7 @@ var startButton = document.querySelector(".startButton");
 var timerElement = document.querySelector(".timer");
 var questionsEl = document.querySelector("#questions");
 var submitButton = document.querySelector(".submit-score-button");
+var quizBox = document.querySelector(".quizBox");
 // var questions
 var answerOptions = document.querySelector(".answerButtons");
 var score = document.querySelector("#score");
@@ -85,7 +86,7 @@ function startGame() {
     startButton.disabled = true;
     // renderBlanks()
     startTimer()
-    questions()
+    // questions()
     getQuestion();
 }
 
@@ -118,7 +119,7 @@ function startTimer() {
 startButton.addEventListener("click", startGame);
 
 // Calls init() so that it fires when page opened
-init();
+// init();
 
 // Function to go through all the quiz questions
 function getQuestion() {
@@ -137,16 +138,17 @@ function getQuestion() {
    option3.textContent = currentQuestion.choice3;
    option4.textContent = currentQuestion.choice4;
    
-   option1.addEventListener("click", selectAnswer);
-   option2.addEventListener("click", selectAnswer); 
-   option3.addEventListener("click", selectAnswer);
-   option4.addEventListener("click", selectAnswer);
+   option1.addEventListener("click", selectOption);
+   option2.addEventListener("click", selectOption); 
+   option3.addEventListener("click", selectOption);
+   option4.addEventListener("click", selectOption);
 }
 
 function selectOption(event) {
-    var clicked =event.currentTarget.textContent;
+    console.log("Is this quiz working?");
+    var clicked = event.currentTarget.textContent;
 
-    if (clicked === currentQuestion.answer) {
+    if (clicked === currentQuestionIndex.answer) {
         result.textContent = "That's correct!";
         wins++;
         score.textContent = "Score: " + wins;
@@ -159,7 +161,7 @@ function selectOption(event) {
         timeLeft = 0
     }
     else {
-        currentIndex++
+        currentQuestionIndex++
         getQuestion();
     }
 }
