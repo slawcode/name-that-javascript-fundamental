@@ -104,17 +104,22 @@ h2 {
 
 .answerButtons {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  /* grid-template-columns: 100px 100px 100px 100px; */
+  /* grid-template-columns: repeat(1, auto); */
   gap: 10px;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .btn {
-  border: 1px solid;
+  border: 3px solid;
   border-radius: 10px;
-  font-size: 10px;
-  padding: 10 px;
+  font-size: 20px;
+  padding: 40 px;
   background-color: rgb(80, 14, 80);
+  margin-top: 30px;
+  height: 40px;
+  /* width: -10 px; */
 }
 
 .btn:hover {
