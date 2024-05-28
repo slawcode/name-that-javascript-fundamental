@@ -5,7 +5,10 @@ var questionsEl = document.querySelector("#questions");
 var submitButton = document.querySelector(".submit-score-button");
 // var questions
 var answerOptions = document.querySelector(".answerButtons");
+var score = document.querySelector("#score");
+var result = document.querySelector("#result");
 
+var wins = 0;
 var timer;
 var timerCount;
 // Set the current index for quiz questions to zero
@@ -144,9 +147,20 @@ function selectOption(event) {
     var clicked =event.currentTarget.textContent;
 
     if (clicked === currentQuestion.answer) {
-        XPathResult.textContent = "That's correct!";
+        result.textContent = "That's correct!";
         wins++;
-        ScreenOrientation.textContent = "Score: " + wins;
+        score.textContent = "Score: " + wins;
+    }
+    else {
+        result.textContent = "Incorrect";
+        // getQuestion()
+    } // Once all questions have been looped through end the game
+    if (currentQuestionIndex === questions.length -1) {
+        timeLeft = 0
+    }
+    else {
+        currentIndex++
+        getQuestion();
     }
 }
 
