@@ -9,7 +9,7 @@ var answerOptions = document.querySelector(".answerButtons");
 var timer;
 var timerCount;
 // Set the current index for quiz questions to zero
-var currentIndex = 0;
+var currentQuestionIndex = 0;
 
 // Create buttons and append 
 var option1 = document.createElement("button");
@@ -29,35 +29,35 @@ answerOptions.appendChild(option4);
 
 // Questions variable created which is an array of all questions and their answer
 var questions = [
-{question1: 'How do we assign a value to a variable?',
+{question: 'How do we assign a value to a variable?',
  choice1: '+',
  choice2: '=',
  choice3: '%',
  choice4: '@',
  answer: '='
 },
-{question2: 'What do primitive data types NOT include from the options available?',
+{question: 'What do primitive data types NOT include from the options available?',
  choice1: 'Undefined',
  choice2: 'String',
  choice3: 'Number',
  choice4: 'True',
  answer: 'True'
 },
-{question3: 'What can be used to store groups of data in a single variable?',
+{question: 'What can be used to store groups of data in a single variable?',
  choice1: 'Arrays',
  choice2: 'Iterations',
  choice3: 'Methods',
  choice4: 'Scope',
  answer: "Arrays"
 },
-{question4: 'How do you write a strict equality operator?',
+{question: 'How do you write a strict equality operator?',
  choice1: '===',
  choice2: '==',
  choice3: '&&',
  choice4: '||',
  answer: '==='
 },
-{question5: 'Which is NOT true of console.log in JavaScript?',
+{question: 'Which is NOT true of console.log in JavaScript?',
  choice1: 'It is a built in function that allows you to output messages to the console.',
  choice2: 'It is a built in function that allows you to output values to the console.',
  choice3: 'It is commonly used for debugging.',
@@ -83,6 +83,7 @@ function startGame() {
     // renderBlanks()
     startTimer()
     questions()
+    getQuestion();
 }
 
 // Function created to start timer 
@@ -118,22 +119,37 @@ init();
 
 // Function to go through all the quiz questions
 function getQuestion() {
-   currentQuestion = questions[currentIndex];
-   quizBox.textContent = currentQuestion.questions;
+   var currentQuestion = questions[currentQuestionIndex];
+   
+//    var titleEl = document.getElementsByClass(".quixBox");
+//    titleEl.textContent = currentQuestion.title;
+   
+   quizBox.textContent = currentQuestion.question;
 
    // Make answer buttons visible, add text content and click event 
    answerOptions.classList.remove("visibility");
 
-   option1.TextContent = currentQuestion.choice1;
+   option1.textContent = currentQuestion.choice1;
    option2.textContent = currentQuestion.choice2;
    option3.textContent = currentQuestion.choice3;
    option4.textContent = currentQuestion.choice4;
    
-   option1.textContent = currentQuestion.choice1;
-   option2.textContent = currentQuestion.choice2; 
-   option3.textContent = currentQuestion.choice3;
-   option4.textContent = currentQuestion.choice4;
+   option1.addEventListener("click", selectAnswer);
+   option2.addEventListener("click", selectAnswer); 
+   option3.addEventListener("click", selectAnswer);
+   option4.addEventListener("click", selectAnswer);
 }
+
+function selectOption(event) {
+    var clicked =event.currentTarget.textContent;
+
+    if (clicked === currentQuestion.answer) {
+        XPathResult.textContent = "That's correct!";
+        wins++;
+        ScreenOrientation.textContent = "Score: " + wins;
+    }
+}
+
 
 //Display question and answer buttons
 // var displayQuestion = function(index) {
