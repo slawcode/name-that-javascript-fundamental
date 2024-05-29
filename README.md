@@ -22,7 +22,7 @@ A timed coding quiz on the fundamentals of JavaScript.
 ![Screenshot of the application showing the second quiz question after a selection was made for the first quiz question, in the browser](./Assets)
 
 - Link to deployed application 
-[x][y]
+[x]https://slawcode.github.io/name-that-javascript-fundamental/[y]
 
 ## License
 - There is no license for this project.
