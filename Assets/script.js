@@ -168,32 +168,3 @@ function selectOption(event) {
     }
 }
 
-//Display question and answer buttons
-// var displayQuestion = function(index) {
-//     questionEl.innerText = index.question
-//     for (var i = 0; i < index.choices.length; i++) {
-//         var answerbutton = document.createElement("button")
-//         answerbutton.innerText = index.choices[i].choice
-//         answerbutton.classList.add("btn")
-//         answerbutton.classList.add("answerbtn")
-//         answerbutton.addEventListener("click", answerCheck)
-//         answerbuttonsEl.appendChild(answerbutton)
-//     }
-// };
-
-//    var promptEL =
-//    document.getElementbyClass ("question-words");
-//    questionsEl.textContent = 
-// //    currentQuestion.prompt; 
-// //    choicesEl.innerHTML = ""; 
-//    currentQuestion.options.forEach( 
-//    function (choice, i) { 
-//    let choiceBtn = 
-//    document.createElement("button"); 
-// })
-// }
-
-
-
-
-// Create a Quiz App with Timer, 2023
