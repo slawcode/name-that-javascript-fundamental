@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <title>JavaScript Quiz!</title>
+  </head>
+  <body>
+    <header 
+        <button class="view-highscores"><a href="highscore.html">View High Scores</a></button>
+        <p class="timer">Timer: <span id="timer">60</span></p> 
+    </header>
+    <main>
+        <section>
+            <h1 class="quiz-title">JavaScript Quiz</h1>
+            <h2>Try to answer the multiple choice questions below on JavaScript fundamentals within the time limit. Press the Start Quiz button below to begin the quiz. Good Luck!</h2>
+            <button class="startButton">Start Quiz</button>
+        </section>
+
+<!-- Section that contains the quiz -->
+        <section class="quizBox"></section>
+        <section class="answerButtons visibility"></section>
+        <section class="myButton"></section>
+
+        <section> 
+            <h2>All done!</h2>
+            <p>Your final score is: </p>
+            <p>Please enter your initials:<input></input>
+            <button class="submit-score-button">Submit</button>
+            </p>
+        </section>
+        <section>
+            <button class="next-button">Next</button>
+        </section>
+        <section> 
+          <p id="result"></p>
+          <p id = "score"></p>
+        </section>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
+
+</html>

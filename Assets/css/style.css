@@ -1,0 +1,155 @@
+* {
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* Create CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+    --white: #fff;
+    /* You can use it with any value that is repeated throughout the sheet */
+    --border-radius: 50px;
+  }
+
+.view-highscores {
+    position: absolute; 
+    top: 25px; 
+    left: 15px;
+    border: none;
+    color: rgb(80, 14, 80);
+    cursor: grab;
+    font-size: 15px;
+  }
+
+.timer {
+    position: absolute; 
+    top: 5px; 
+    right: -15px;
+    font-size: 15px;
+}
+
+section {
+    text-align: center;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 47px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 0;
+    font: Verdana;
+}
+
+h2 {
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    padding: 45px;
+    margin: 5px;
+    /*margin: 50px auto 0 auto; */
+    /*max-width: 600px; */
+}
+
+/*button {
+    width: 250px;
+    margin: 0 .5%;
+    font-size: 100%;
+    color: white;
+    background-color: rgb(80, 14, 80);
+    border: 3px solid #13293d;
+    border-radius: 25px;
+  } */
+
+/*button {
+    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
+    border-radius: 8px;
+    color: #13293d;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+} */
+
+/* button:hover {
+    background-color: rgb(164, 30, 164);
+} */
+
+.start-button {
+    color: white;
+    background-color: rgb(80, 14, 80);
+    cursor: grab;
+    padding: 10px;
+    border: 10px; 
+    border-radius: 7px;
+    text-align: center;
+    line-height: 10px;
+    max-width: 255px;
+    transition-duration: 0.60s;
+}
+
+.quizBox, .myButton {
+  text-align: center;
+  justify-content: center;
+}
+
+.answerButtons {
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  /* grid-template-columns: 100px 100px 100px 100px; */
+  /* grid-template-columns: repeat(1, auto); */
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.btn {
+  border: 3px solid;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 40 px;
+  background-color: rgb(80, 14, 80);
+  margin-top: 30px;
+  height: 40px;
+  /* width: -10 px; */
+}
+
+.btn:hover {
+  background-color: rgb(80, 14, 80); 
+  color: white; 
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  }
+  
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    nav {
+      background-color: #bb8588;
+      width: 100%;
+    }
+  }
+  
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    .sample-img {
+      background-color: #8ac4ff;
+      width: 100%;
+    }
+  }
