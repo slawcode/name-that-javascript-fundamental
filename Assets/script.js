@@ -72,13 +72,6 @@ var questions = [
 
 var time = questions.length * 60;
 
-// function startQuiz () {
-//     time = setInterval (
-//         clockTick,
-//         1000
-//     );
-// }
-
 function startGame() {
     isWin = false;
     timerCount = 60;
@@ -108,18 +101,27 @@ function startTimer() {
         if (timerCount === 0) {
             // Clears interval
             clearInterval(timer);
-            loseGame();
+            // loseGame();
+            quizEnd();
         }
     }, 1000);
 }
 
-// Start the quiz when the 'Start Quiz' button is clicked
-// startBtn.onclick = startQuiz;
+function quizEnd() {
+    $("#questions").hide();
+
+    if (questions[currentQuestionIndex] === 5 || time ===0) {
+        clearInterval(timer); 
+        showScore(); 
+    }
+}
+function loseGame() {
+    timerElement.textContent = "Game over!";
+    loseCounter++
+    startButton.disabled = false;
+}
 // Attach event listener to start button to call startGame function on click
 startButton.addEventListener("click", startGame);
-
-// Calls init() so that it fires when page opened
-// init();
 
 // Function to go through all the quiz questions
 function getQuestion() {
@@ -165,7 +167,6 @@ function selectOption(event) {
         getQuestion();
     }
 }
-
 
 //Display question and answer buttons
 // var displayQuestion = function(index) {
