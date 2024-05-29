@@ -10,8 +10,9 @@ A timed coding quiz on the fundamentals of JavaScript.
 ## Usage
 - To take this quiz, the user can access the webpage by placing the URL in a browser. The webpage does not require any authentications, like a password.
 - The quiz starts once the 'Start Quiz' button is clicked and the user then has one minute, or 60 seconds, to select the answer from the multiple choice options provided. 
+- The slection choices for the answer to each quesrtion appear when the user hoovers over each button and the text colour changes form black to whie. 
 - After all the questions have been answered, the user can enter their initials and submit those initials.
-- After submitting their initials, the user can view the high scores and/or go back to the initial page of the quiz, where the 'Start' button is accessible again.
+- After submitting their initials, the user can view the high scores and/or go back to the homepage of the quiz, where the 'Start Quiz' button is accessible again.
 
 
 ## License
